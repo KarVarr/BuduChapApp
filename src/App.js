@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
+import Error from './pages/Error';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './style.scss';
 import { AuthContext } from './context/AuthContext';
@@ -14,6 +15,7 @@ function App() {
     if (!currentUser) {
       return <Navigate to='/login' />;
     }
+    return children;
   };
 
   return (
@@ -30,6 +32,7 @@ function App() {
           />
           <Route path='login' element={<Login />} />
           <Route path='register' element={<Register />} />
+          <Route path='error' element={<Error />} />
         </Route>
       </Routes>
     </BrowserRouter>

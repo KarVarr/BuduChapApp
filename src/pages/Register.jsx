@@ -3,8 +3,9 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth, storage, db } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { doc, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import avatarImage from '../image/add-user.png';
+import Error from './Error';
 
 const Register = () => {
   const [err, setErr] = useState(false);
@@ -41,7 +42,7 @@ const Register = () => {
               photoURL: downloadURL,
             });
             await setDoc(doc(db, 'userChats', res.user.uid), {});
-            navigate('/')
+            navigate('/');
           });
         }
       );
@@ -51,25 +52,32 @@ const Register = () => {
   };
 
   return (
-    <div className='formContainer'>
-      <div className='formWrapper'>
-        <span className='logo'>BuDu Chat</span>
-        <span className='title'>Register</span>
-        <form onSubmit={handleSubmit}>
-          <input type='text' placeholder='display name' />
-          <input type='email' placeholder='email' />
-          <input type='password' placeholder='password' />
-          <input style={{ display: 'none' }} type='file' id='file' />
-          <label htmlFor='file'>
-            <img src={avatarImage} alt='avatarImage' />
-            <span>Add an avatar</span>
-          </label>
-          <button>Sign Up</button>
-          {err && <span>Somthing went wrong</span>}
-        </form>
-        <p>You do have an account? Login</p>
-      </div>
-    </div>
+    <>
+      {err ? (
+        <Error/>
+      ) : (
+        <div className='formContainer'>
+          <div className='formWrapper'>
+            <span className='logo'>BuDu Chat</span>
+            <span className='title'>Register</span>
+            <form onSubmit={handleSubmit}>
+              <input type='text' placeholder='display name' />
+              <input type='email' placeholder='email' />
+              <input type='password' placeholder='password' />
+              <input style={{ display: 'none' }} type='file' id='file' />
+              <label htmlFor='file'>
+                <img src={avatarImage} alt='avatarImage' />
+                <span>Add an avatar</span>
+              </label>
+              <button>Sign Up</button>
+            </form>
+            <p>
+              Do you have an account? <Link to='/login'>Login</Link>
+            </p>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

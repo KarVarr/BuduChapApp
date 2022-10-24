@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { ChatContext } from '../context/ChatContext';
 
 import UserPhoto from '../image/harry_potter.webp';
 
-const Message = () => {
+const { currentUser } = useContext(AuthContext);
+const { data } = useContext(ChatContext);
+
+const Message = ({ messages }) => {
   return (
     <div className='message owner'>
       <div className='messageInfo'>
