@@ -62,6 +62,7 @@ body {
         color: #fff;
         padding: 10px;
         font-weight: bold;
+        border: none;
         cursor: pointer;
       }
 
@@ -239,7 +240,11 @@ body {
         height: calc(100% - 160px);
         background-color: #ddddf7;
         overflow: scroll;
-
+        &::-webkit-scrollbar {
+          display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
         .message {
           display: flex;
           gap: 20px;
@@ -266,7 +271,7 @@ body {
             p {
               background-color: #fff;
               padding: 10px 20px;
-              border-radius: 1px 15px 15px 15px;
+              border-radius: 3px 20px 3px 20px;
               max-width: max-content;
             }
             img {
@@ -283,7 +288,7 @@ body {
             p {
               background-color: #8da4f1;
               color: #fff;
-              border-radius: 20px 1px 30px 20px;
+              border-radius: 20px 3px 20px 3px;
             }
           }
         }

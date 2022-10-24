@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
 
-import userPhoto from '../image/harry_potter.webp'
 
+import userPhoto from '../image/harry_potter.webp';
 
 const Navbar = () => {
   return (
@@ -10,10 +12,10 @@ const Navbar = () => {
       <div className='user'>
         <img src={userPhoto} alt='userPhoto' />
         <span>Harry</span>
-        <button>logout</button>
+        <button onClick={() => signOut(auth)}>logout</button>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
