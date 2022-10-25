@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/BuduChatApp/static/css/main.f920c04c.chunk.css",
+    "main.js": "/BuduChatApp/static/js/main.654b420e.chunk.js",
+    "main.js.map": "/BuduChatApp/static/js/main.654b420e.chunk.js.map",
+    "runtime-main.js": "/BuduChatApp/static/js/runtime-main.a09d17c0.js",
+    "runtime-main.js.map": "/BuduChatApp/static/js/runtime-main.a09d17c0.js.map",
+    "static/js/2.3ecd0513.chunk.js": "/BuduChatApp/static/js/2.3ecd0513.chunk.js",
+    "static/js/2.3ecd0513.chunk.js.map": "/BuduChatApp/static/js/2.3ecd0513.chunk.js.map",
+    "index.html": "/BuduChatApp/index.html",
+    "static/css/main.f920c04c.chunk.css.map": "/BuduChatApp/static/css/main.f920c04c.chunk.css.map",
+    "static/js/2.3ecd0513.chunk.js.LICENSE.txt": "/BuduChatApp/static/js/2.3ecd0513.chunk.js.LICENSE.txt",
+    "static/media/404error.2a9b2b2d.png": "/BuduChatApp/static/media/404error.2a9b2b2d.png",
+    "static/media/add-user.0653f26b.png": "/BuduChatApp/static/media/add-user.0653f26b.png",
+    "static/media/attach-svgrepo-com.563a6fea.svg": "/BuduChatApp/static/media/attach-svgrepo-com.563a6fea.svg",
+    "static/media/harry_potter.567b8f44.webp": "/BuduChatApp/static/media/harry_potter.567b8f44.webp",
+    "static/media/image-add-fill-svgrepo-com.e311e3a8.svg": "/BuduChatApp/static/media/image-add-fill-svgrepo-com.e311e3a8.svg",
+    "static/media/more-svgrepo-com.6600884b.svg": "/BuduChatApp/static/media/more-svgrepo-com.6600884b.svg",
+    "static/media/user-add-svgrepo-com.94fcd152.svg": "/BuduChatApp/static/media/user-add-svgrepo-com.94fcd152.svg",
+    "static/media/video-camera-svgrepo-com.e2b4f992.svg": "/BuduChatApp/static/media/video-camera-svgrepo-com.e2b4f992.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a09d17c0.js",
+    "static/js/2.3ecd0513.chunk.js",
+    "static/css/main.f920c04c.chunk.css",
+    "static/js/main.654b420e.chunk.js"
+  ]
+}
